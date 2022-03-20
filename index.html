@@ -14,22 +14,29 @@
             <a href="" target="self" >view high scores</a>
         </div>
         <div class="timer">
-            <p>timer:0</p>
+            <p id="countdown">75</p>
         </div>
         <div class="content">
-            <div id="question-container">
-                <div id="question">
-                    <h1>Coding Quiz Challenge</h1>
-                    <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
-                </div>
+            <h1 id="h1-title">Coding Quiz Challenge</h1>
+            <p id="p-instructions">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+            
+            <div id="question-container" class="hide">
+                <div id="question">Question</div>
+                
                 <div id="answer-buttons" class="btn-grid">
-                    <button class="btn">answer 1</button>
-                    <button class="btn">answer 2</button>
-                    <button class="btn">answer 3</button>
-                    <button class="btn">answer 4</button>
+                    <button class="btn" id="btn">answer 1</button>
+                    <button class="btn" id="btn">answer 2</button>
+                    <button class="btn" id="btn">answer 3</button>
+                    <button class="btn" id="btn">answer 4</button>
                 </div>
             </div>
-            <button class="start-button btn" id="start-btn">Start Quiz</button>
+            <div class="controls">
+                <button class="start-btn btn" id="start-btn">Start Quiz</button>
+                <button id="next-btn" class="next-btn btn">Next</button>
+
+            </div>
+
+            
             
 
         </div>

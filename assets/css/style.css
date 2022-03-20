@@ -22,6 +22,9 @@ body {
     padding: 10px;
     box-shadow: 0 0 10px 2px;
 }
+.content{
+    text-align: center;
+}
 
 .btn-grid {
     display: grid;
@@ -36,12 +39,24 @@ body {
     border-radius: 5px;
     padding: 5px 10px;
 }
+.controls{
+    display:flex;
+    justify-content: center;
+}
 
 .btn:hover{
     background-color:rgb(250, 233, 233);
 }
+.start-btn, .next-btn{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
 
 .hide{
     display: none;
+}
 
+.show{
+    display: block;
 }
