@@ -5,7 +5,13 @@ var h1Title = document.getElementById('h1-title');
 var pInstructions = document.getElementById('p-instructions');
 var questionElement = document.getElementById('question');
 var answerButtonsElement = document.getElementById('answer-buttons');
+var button1 = document.getElementById('btnOne');
+var button2 = document.getElementById('btnTwo');
+var button3 = document.getElementById('btnThree');
+var button4 = document.getElementById('btnFour');
 var timerEl = document.getElementById('countdown');
+
+
 
 var shuffledQuestions, currentQuestionIndex;
 currentQuestionIndex ++;
@@ -58,6 +64,7 @@ var questions = [
      }
     
 ];
+//time function
 function countdown() {
     var timeLeft = 75;
   
@@ -75,12 +82,15 @@ function countdown() {
         displayMessage();
       }
     }, 1000);
-  }
+  }//End of timer function
 
+//next button 
 nextButton.addEventListener('click', () =>{
     currentQuestionIndex++
     setNextQuestion();
 })
+
+//start function when clicking start button
 function startGame() {
     console.log("Started");
     startButton.classList.add('hide');
@@ -90,10 +100,10 @@ function startGame() {
     currentQuestionIndex = 0;
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     setNextQuestion();
-    console.log(answerButtonsElement)
     countdown();
 }
 
+//Set the next question on screen with the new answers options
 function setNextQuestion(){
     resetState()
     showQuestion(shuffledQuestions[currentQuestionIndex]);
@@ -113,6 +123,7 @@ function showQuestion(question){
     })
 }
 
+//Reset the previous bottons to create space for the new answers buttons
 function resetState(){
     while (answerButtonsElement.firstChild){
         answerButtonsElement.removeChild(answerButtonsElement.firstChild);
@@ -135,6 +146,13 @@ function selectAnswer(e){
     }
 }
 
+function rightOrWrong(){
+    console.log("holaaaa");
+
+
+
+}
+
 
 
 function setStatusClass(element, correct){
@@ -154,4 +172,7 @@ function clearStatusClass(element){
 }
 
 startButton.addEventListener('click', startGame);
-answerButtonsElement.addEventListener('click', setNextQuestion );
+button1.addEventListener('click', rightOrWrong);
+button2.addEventListener('click', rightOrWrong);
+button3.addEventListener('click', rightOrWrong);
+button4.addEventListener('click', rightOrWrong);
